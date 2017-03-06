@@ -37,10 +37,16 @@
     <script src="/socket.js"></script>
     <script>
       var socket = io();
+      socker.emit('load message');
+
       $('form').submit(function(){
         socket.emit('chat message', ""+$('#name').val()+": "+$('#m').val());
         $('#m').val('');
         return false;
+      });
+      socket.on('loaded message', function(msg){
+        $('#messages').append($('<li>').text(msg));
+        //notifyMe(msg);
       });
       socket.on('chat message', function(msg){
         $('#messages').append($('<li>').text(msg));

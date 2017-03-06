@@ -16,6 +16,6 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Krid Jinklub",
   "license": "BSD"
 }
