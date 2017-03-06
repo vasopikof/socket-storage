@@ -1,0 +1,4 @@
+applications:
+- name: testnode-vasopikof
+  random-route: true
+  memory: 128M
